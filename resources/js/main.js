@@ -297,12 +297,23 @@
              contentType: false,
              processData: false,
              success: function (response) {
-                 for(var index = 0; index < response.length; index++) {
-                     var src = response[index];
+                 if(response.errors)
+				 {
+				 	html = '<p>'+response.message+'</p>';
+                     $('#form_upload').append(html)
+				 }else{
+                     for(var index = 0; index < response.length; index++) {
+                         var src = response[index];
 
-                     // Add img element in <div id='preview'>
-                     $('#form_upload').append('<img src="'+src+'" width="200px;" height="200px">');
-                 }
+                         // Add img element in <div id='preview'>
+                         $('#form_upload').append('<img src="'+src+'" width="200px;" height="200px">');
+                     }
+				 }
+             },
+			 error:function (error,textstatus) {
+             	console.log(error,textstatus)
+                 html = '<p>'+error.responseJSON.message+'</p>';
+                 $('#form_upload').append(html)
              }
          });
      });
