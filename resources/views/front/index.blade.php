@@ -6,17 +6,13 @@
                 <div class="row d-flex justify-content-center mt-100">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header">
-                                <h5>File Upload</h5>
-                            </div>
-                            <div class="card-block">
-                                <form action="#" class="dropzone dz-clickable">
-                                    <div class="dz-default dz-message"><span>Drop files here to upload</span></div>
-                                </form>
-                                <div class="text-center m-t-20">
-                                    <button class="btn btn-primary">Upload Now</button>
+                            <form method="post" action="" id="form_upload" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group files color">
+                                    <label>Upload Your File </label>
+                                    <input type="file" class="form-control" multiple="" name="images[]" id="upload_img">
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

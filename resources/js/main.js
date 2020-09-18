@@ -277,3 +277,33 @@
 
 })(jQuery);
 
+ $(function() {
+     $("#upload_img").change(function() {
+         var form_data = new FormData();
+         form_data.append('_token',$('[name=_token]').val())
+
+         // Read selected files
+         var totalfiles = document.getElementById('upload_img').files.length;
+         for (var index = 0; index < totalfiles; index++) {
+             form_data.append("images[]", document.getElementById('upload_img').files[index]);
+         }
+
+         // AJAX request
+         $.ajax({
+             url: '/compression',
+             type: 'post',
+             data: form_data,
+             dataType: 'json',
+             contentType: false,
+             processData: false,
+             success: function (response) {
+                 for(var index = 0; index < response.length; index++) {
+                     var src = response[index];
+
+                     // Add img element in <div id='preview'>
+                     $('#form_upload').append('<img src="'+src+'" width="200px;" height="200px">');
+                 }
+             }
+         });
+     });
+ });

@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','Compression\CompressionController@index');
+Route::post('/compression','Compression\CompressionController@compress')->name('compress');
