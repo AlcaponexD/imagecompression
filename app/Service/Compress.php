@@ -24,7 +24,7 @@ class Compress
             $path = '/uploads/' .$file->getClientOriginalName();
 
            $imagem = Storage::disk('public')->put($path,$img);
-            $urls[] = 'http://localhost:8000'.'/storage'.$path;
+            $urls[] = env('APP_URL').'/storage'.$path;
 //            env('APP_URL')
         }
 
