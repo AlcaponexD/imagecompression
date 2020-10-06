@@ -21,13 +21,13 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="#" class="nav-link">MENU</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">MENU</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">MENU</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">MENU</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">MENU</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">MENU</a></li>
-                <li class="nav-item cta"><a href="#" class="nav-link"><span>MENU</span></a></li>
+                <li class="nav-item active"><a href="#" class="nav-link">HOME</a></li>
+                {{--<li class="nav-item"><a href="#" class="nav-link">MENU</a></li>--}}
+                {{--<li class="nav-item"><a href="#" class="nav-link">MENU</a></li>--}}
+                {{--<li class="nav-item"><a class="nav-link" href="#">MENU</a></li>--}}
+                {{--<li class="nav-item"><a href="#" class="nav-link">MENU</a></li>--}}
+                {{--<li class="nav-item"><a href="#" class="nav-link">MENU</a></li>--}}
+                {{--<li class="nav-item cta"><a href="#" class="nav-link"><span>MENU</span></a></li>--}}
             </ul>
         </div>
     </div>

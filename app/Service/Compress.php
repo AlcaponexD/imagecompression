@@ -25,7 +25,6 @@ class Compress
 
            $imagem = Storage::disk('public')->put($path,$img);
             $urls[] = env('APP_URL').'/storage'.$path;
-//            env('APP_URL')
         }
 
         return response()->json($urls);

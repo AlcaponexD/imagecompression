@@ -297,6 +297,7 @@
              contentType: false,
              processData: false,
              success: function (response) {
+             	console.log(response)
                  if(response.errors)
 				 {
 				 	html = '<p>'+response.message+'</p>';
@@ -306,7 +307,7 @@
                          var src = response[index];
 
                          // Add img element in <div id='preview'>
-                         $('#form_upload').append('<img src="'+src+'" width="200px;" height="200px">');
+                         $('#form_upload').append('<a href="'+src+'" target="_blank"><img style="padding: 12px" src="'+src+'" width="200px;" height="200px"></a>');
                      }
 				 }
              },
